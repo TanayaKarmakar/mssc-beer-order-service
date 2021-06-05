@@ -46,6 +46,8 @@ public class BeerOrderServiceImpl implements BeerOrderService {
     private final BeerOrderMapper beerOrderMapper;
     private final ApplicationEventPublisher publisher;
 
+    public static final String BEER_ORDER_HEADER = "beer_order_id";
+
     public BeerOrderServiceImpl(BeerOrderRepository beerOrderRepository,
                                 CustomerRepository customerRepository,
                                 BeerOrderMapper beerOrderMapper, ApplicationEventPublisher publisher) {
