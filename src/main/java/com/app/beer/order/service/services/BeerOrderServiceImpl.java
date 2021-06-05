@@ -18,13 +18,13 @@
 package com.app.beer.order.service.services;
 
 import com.app.beer.order.service.domain.BeerOrderStatusEnum;
-import com.app.beer.order.service.web.model.BeerOrderDto;
+import com.app.common.model.BeerOrderDto;
 import com.app.beer.order.service.domain.BeerOrder;
 import com.app.beer.order.service.domain.Customer;
 import com.app.beer.order.service.repositories.BeerOrderRepository;
 import com.app.beer.order.service.repositories.CustomerRepository;
 import com.app.beer.order.service.web.mappers.BeerOrderMapper;
-import com.app.beer.order.service.web.model.BeerOrderPagedList;
+import com.app.common.model.BeerOrderPagedList;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Page;

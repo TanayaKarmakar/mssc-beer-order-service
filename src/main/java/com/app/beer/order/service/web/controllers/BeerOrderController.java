@@ -17,9 +17,9 @@
 
 package com.app.beer.order.service.web.controllers;
 
-import com.app.beer.order.service.web.model.BeerOrderDto;
+import com.app.common.model.BeerOrderDto;
 import com.app.beer.order.service.services.BeerOrderService;
-import com.app.beer.order.service.web.model.BeerOrderPagedList;
+import com.app.common.model.BeerOrderPagedList;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

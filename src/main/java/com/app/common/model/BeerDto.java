@@ -1,6 +1,5 @@
-package com.app.beer.order.service.web.model;
+package com.app.common.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

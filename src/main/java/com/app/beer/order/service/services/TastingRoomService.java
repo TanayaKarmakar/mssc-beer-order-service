@@ -1,8 +1,8 @@
 package com.app.beer.order.service.services;
 
 import com.app.beer.order.service.repositories.BeerOrderRepository;
-import com.app.beer.order.service.web.model.BeerOrderDto;
-import com.app.beer.order.service.web.model.BeerOrderLineDto;
+import com.app.common.model.BeerOrderDto;
+import com.app.common.model.BeerOrderLineDto;
 import com.app.beer.order.service.bootstrap.BeerOrderBootStrap;
 import com.app.beer.order.service.domain.Customer;
 import com.app.beer.order.service.repositories.CustomerRepository;

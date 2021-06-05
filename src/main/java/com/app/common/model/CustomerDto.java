@@ -15,9 +15,27 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.app.beer.order.service.web.model;
+package com.app.common.model;
 
-public enum OrderStatusEnum {
-    NEW, VALIDATED, VALIDATION_EXCEPTION, ALLOCATED, ALLOCATION_EXCEPTION, PENDING_INVENTORY,
-    READY, PICKED_UP, DELIVERED, DELIVERY_EXCEPTION;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+import java.time.OffsetDateTime;
+import java.util.UUID;
+
+@Data
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class CustomerDto extends BaseItem {
+
+    @Builder
+    public CustomerDto(UUID id, Integer version, OffsetDateTime createdDate, OffsetDateTime lastModifiedDate, String name) {
+        super(id, version, createdDate, lastModifiedDate);
+        this.name = name;
+    }
+
+    private String name;
+
 }
