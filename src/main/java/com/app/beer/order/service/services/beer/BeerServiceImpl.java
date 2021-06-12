@@ -18,7 +18,7 @@ import java.util.UUID;
 @ConfigurationProperties(prefix = "sfg.brewery", ignoreUnknownFields = true)
 public class BeerServiceImpl implements BeerService{
     public final static String BEER_PATH_V1 = "/api/v1/beer/";
-    public final static String BEER_UPC_PATH_V1 = "/api/v1/beer/upc";
+    public final static String BEER_UPC_PATH_V1 = "/api/v1/beer/upc/";
 
     @Value("${sfg.brewery.beer-service-host}")
     private String beerServiceHost;
