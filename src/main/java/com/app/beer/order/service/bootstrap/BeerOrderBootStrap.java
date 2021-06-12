@@ -6,13 +6,14 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.UUID;
 
 /**
  * Created by jt on 2019-06-06.
  */
 @RequiredArgsConstructor
-//@Component
+@Component
 public class BeerOrderBootStrap implements CommandLineRunner {
     public static final String TASTING_ROOM = "Tasting Room";
     public static final String BEER_1_UPC = "0631234200036";
@@ -32,6 +33,14 @@ public class BeerOrderBootStrap implements CommandLineRunner {
                     .customerName(TASTING_ROOM)
                     .apiKey(UUID.randomUUID())
                     .build());
+        } else {
+            List<Customer> customerList = customerRepository.findAllByCustomerNameLike(BeerOrderBootStrap.TASTING_ROOM);
+            if(customerList.isEmpty()) {
+                customerRepository.save(Customer.builder()
+                        .customerName(TASTING_ROOM)
+                        .apiKey(null)
+                        .build());
+            }
         }
     }
 }
